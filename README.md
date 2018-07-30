@@ -2,13 +2,16 @@
 猫咪音乐
 # demo 展示
 播放器首页：
+
 ![image](https://github.com/chancejl/vue_music/blob/master/cat-main.PNG)
 
 播放器列表：热门推荐，歌手列表
+
 ![image](https://github.com/chancejl/vue_music/blob/master/cat-list.PNG)
 ![image](https://github.com/chancejl/vue_music/blob/master/music-singer.PNG)
 
 播放器搜索：
+
 ![image](https://github.com/chancejl/vue_music/blob/master/music-search.PNG)
 
 
@@ -32,7 +35,7 @@ export function debounce(func,delay){
 }
 
 ### 图片挂载问题
-> 设置了图片的样式和slider的宽度以后 图片的大小没有变化还是很大  
+> 设置了图片的样式和slider的宽度以后 图片的大小还是很大
 
 - 在slider组件中,在mounted这个钩子函数中执行setSliderWidth这个函数设置轮播总长度和给slider-item添加class
 - 在recommond组件中我获取数据是在created这个钩子中获取,本来是认为在created获取可以保证后面挂载的正常进行,因为在创建时就有元素，但是其实获取数据是需要时间的，其实在进行mounted这一步的时,数据可能还没右,所以slider里面并没有元素,即使数据获取回来后,mouted已经结束,所以样式未添加上
